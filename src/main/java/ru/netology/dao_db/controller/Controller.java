@@ -4,18 +4,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.dao_db.repository.db_repo;
+import ru.netology.dao_db.repository.DbRepository;
 
 import java.util.List;
 
 
 @RestController
 @RequestMapping("products")
-public class controller {
+public class Controller {
 
-    db_repo dbRepo;
+    DbRepository dbRepo;
 
-    public controller(db_repo dbRepo) {
+    public Controller(DbRepository dbRepo) {
         this.dbRepo = dbRepo;
     }
 

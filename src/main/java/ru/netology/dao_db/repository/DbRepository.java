@@ -14,13 +14,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Repository
-public class db_repo {
+public class DbRepository {
     private final String sqlScriptName = "script.sql";
     private final String productName;
 
     NamedParameterJdbcTemplate namedParameterJdbcTemplate;
 
-    public db_repo(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+    public DbRepository(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
         this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
         productName = read(sqlScriptName);
     }
